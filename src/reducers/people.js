@@ -18,7 +18,7 @@ const people = [
   { id: 15, name: 'Tanisha Norman' },
   { id: 16, name: 'Cynthia Sapp' },
   { id: 17, name: 'Penny Laurent' }
-]
+];
 
 const initialState = {
   people: people,
@@ -28,9 +28,9 @@ const initialState = {
 export default function browse(state = initialState, action) {
   switch (action.type) {
 
-    // this is an example
-    case types.DO_NOTHING:
-      return state;
+    case types.UPDATE_QUERY:
+      const filterQuery = action.payload;
+      return {...state, filterQuery};
 
     // ...
 
