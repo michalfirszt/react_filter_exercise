@@ -18,7 +18,8 @@ class Filter extends Component {
     return (
       <div className='App-box'>
         <input
-          type="text"
+          type='text'
+          placeholder='Filter'
           value={this.props.filterQuery}
           onChange={event => this.handleOnChange(event.target.value)}
         />
@@ -28,7 +29,7 @@ class Filter extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  value: state.peopleReducer.filterQuery
+  filterQuery: state.peopleReducer.filterQuery
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
