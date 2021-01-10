@@ -10,8 +10,8 @@ class Filter extends Component {
     filterQuery: PropTypes.string
   };
 
-  handleOnChange = text => {
-    this.props.updateQuery(text);
+  handleOnChange = event => {
+    this.props.updateQuery(event.target.value);
   };
 
   render() {
@@ -21,7 +21,7 @@ class Filter extends Component {
           type='text'
           placeholder='Filter'
           value={this.props.filterQuery}
-          onChange={event => this.handleOnChange(event.target.value)}
+          onChange={this.handleOnChange}
         />
       </div>
     );
